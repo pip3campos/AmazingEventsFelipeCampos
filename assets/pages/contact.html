@@ -11,25 +11,38 @@
     <title>AMAZINGEVENTS - CONTACT</title>
 </head>
 
-<body>
-    <header>
-        <img src="../images/amazing_brand.png" alt="">
-        <nav>
-            <a href="../../index.html">Home</a>
-            <a href="../pages/upcomingEvents.html">Upcoming Events</a>
-            <a href="../pages/pastEvents.html">Past Events</a>
-            <a href="#">Contact</a>
-            <a href="../pages/stats.html">Stats</a>
+<body class="d-flex flex-column">
+    <header class="d-flex flex-column flex-sm-row justify-content-sm-between">
+        <div class="col-11 col-sm-1 m-3 d-flex justify-content-center"><img class="img-fluid" src="../images/amazing_brand.png" alt=""></div>
+        <nav class="nav navbar-expand nav-pills nav-justified flex-column flex-sm-row col-sm-7 p-2">
+            <a class="nav-link flex-sm-fill text-sm-center" href="../../index.html">Home</a>
+            <a class="nav-link flex-sm-fill text-sm-center" href="./upcomingEvents.html">Upcoming Events</a>
+            <a class="nav-link flex-sm-fill text-sm-center" href="./pastEvents.html">Past Events</a>
+            <a class="nav-link active flex-sm-fill text-sm-center" href="#">Contact</a>
+            <a class="nav-link flex-sm-fill text-sm-center" href="./stats.html">Stats</a>
         </nav>
     </header>
-    <main></main>
-    <footer>
-        <div>
-            <img src="../images/facebook.png" alt="">
-            <img src="../images/instagram.png" alt="">
-            <img src="../images/whatsapp.png" alt="">
+    <main class="flex-grow-1 bg-warning">
+        <article>
+            <section class="d-flex flex-column align-items-center shadow">
+                <div class="col-11 col-sm-3">
+                    <img class="img-fluid" src="./assets/images/food_fair.jpg" alt="">
+                </div>
+                <h2 class="col-10 text-center">Festival of the collectivities</h2>
+                <div class="d-flex justify-content-between col-11">
+                    <h3>$5</h3>
+                    <a href="./details.html">Details</a>
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer class="d-flex justify-content-between m-2">
+        <div class="d-flex column-gap-1">
+            <div class="col-2"><img class="img-fluid" src="../images/facebook.png" alt=""></div>
+            <div class="col-2"><img class="img-fluid" src="../images/instagram.png" alt=""></div>
+            <div class="col-2"><img class="img-fluid" src="../images/whatsapp.png" alt=""></div>
         </div>
-        <div><h6>Cohort N°50</h6></div>
+        <h6>Cohort N°50</h6>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
