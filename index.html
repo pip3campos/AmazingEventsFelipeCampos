@@ -12,23 +12,72 @@
 </head>
 
 <body class="d-flex flex-column">
-    <header class="d-flex flex-column flex-sm-row justify-content-sm-between">
+    <header class="d-flex flex-column flex-sm-row">
         <div class="col-11 col-sm-1 m-3 d-flex justify-content-center"><img class="img-fluid" src="./assets/images/amazing_brand.png" alt=""></div>
-        <nav class="nav navbar-expand nav-pills nav-justified flex-column flex-sm-row col-sm-7 p-2">
-            <a class="nav-link active flex-sm-fill text-sm-center" href="#">Home</a>
-            <a class="nav-link flex-sm-fill text-sm-center" href="./assets/pages/upcomingEvents.html">Upcoming Events</a>
-            <a class="nav-link flex-sm-fill text-sm-center" href="./assets/pages/pastEvents.html">Past Events</a>
-            <a class="nav-link flex-sm-fill text-sm-center" href="./assets/pages/contact.html">Contact</a>
-            <a class="nav-link flex-sm-fill text-sm-center" href="./assets/pages/stats.html">Stats</a>
+        <div class="flex-grow-1"></div>
+        <nav class="nav navbar-expand nav-pills nav-justified flex-column flex-sm-row col-sm-8 p-2">
+            <a class="nav-link active flex-sm-fill text-sm-center ankors d-flex align-items-center justify-content-center" href="#">Home</a>
+            <a class="nav-link flex-sm-fill text-sm-center ankors d-flex align-items-center justify-content-center" href="./assets/pages/upcomingEvents.html">Upcoming Events</a>
+            <a class="nav-link flex-sm-fill text-sm-center ankors d-flex align-items-center justify-content-center" href="./assets/pages/pastEvents.html">Past Events</a>
+            <a class="nav-link flex-sm-fill text-sm-center ankors d-flex align-items-center justify-content-center" href="./assets/pages/contact.html">Contact</a>
+            <a class="nav-link flex-sm-fill text-sm-center ankors d-flex align-items-center justify-content-center" href="./assets/pages/stats.html">Stats</a>
         </nav>
     </header>
     <main class="flex-grow-1 bg-warning">
-        <article>
-            <section class="d-flex flex-column align-items-center shadow">
-                <div class="col-11 col-sm-3"><img class="img-fluid" src="./assets/images/food_fair.jpg" alt=""></div>
+        <article class="min-vh-100 d-flex flex-column flex-sm-row row-gap-2 column-gap-2 align-items-center justify-content-evenly flex-wrap mt-2 mb-2">
+            <section class="d-flex flex-column align-items-center shadow col-11 col-sm-2 bg-danger">
+                <div class="col-11 mt-2"><img class="img-fluid" src="./assets/images/food_fair.jpg" alt=""></div>
                 <h2 class="col-10 text-center">Festival of the collectivities</h2>
                 <div class="d-flex justify-content-between col-11">
                     <h3>$5</h3>
+                    <a href="./assets/pages/details.html">Details</a>
+                </div>
+            </section>
+            <section class="d-flex flex-column align-items-center shadow col-11 col-sm-2 bg-danger">
+                <div class="col-11 mt-2"><img class="img-fluid" src="./assets/images/outing_to_the_museum.jpg" alt=""></div>
+                <h2 class="col-10 text-center">Art Exhibition</h2>
+                <div class="d-flex justify-content-between col-11">
+                    <h3>$15</h3>
+                    <a href="./assets/pages/details.html">Details</a>
+                </div>
+            </section>
+            <section class="d-flex flex-column align-items-center shadow col-11 col-sm-2 bg-danger">
+                <div class="col-11 mt-2"><img class="img-fluid" src="./assets/images/costume_party.jpg" alt=""></div>
+                <h2 class="col-10 text-center">Halloween Night</h2>
+                <div class="d-flex justify-content-between col-11">
+                    <h3>$12</h3>
+                    <a href="./assets/pages/details.html">Details</a>
+                </div>
+            </section>
+            <section class="d-flex flex-column align-items-center shadow col-11 col-sm-2 bg-danger">
+                <div class="col-11 mt-2"><img class="img-fluid" src="./assets/images/music_concert.jpg" alt=""></div>
+                <h2 class="col-10 text-center">Metallica in concert</h2>
+                <div class="d-flex justify-content-between col-11">
+                    <h3>$150</h3>
+                    <a href="./assets/pages/details.html">Details</a>
+                </div>
+            </section>
+            <section class="d-flex flex-column align-items-center shadow col-11 col-sm-2 bg-danger">
+                <div class="col-11 mt-2"><img class="img-fluid" src="./assets/images/marathon.jpg" alt=""></div>
+                <h2 class="col-10 text-center">10K for life</h2>
+                <div class="d-flex justify-content-between col-11">
+                    <h3>$3</h3>
+                    <a href="./assets/pages/details.html">Details</a>
+                </div>
+            </section>
+            <section class="d-flex flex-column align-items-center shadow col-11 col-sm-2 bg-danger">
+                <div class="col-11 mt-2"><img class="img-fluid" src="./assets/images/books.jpg" alt=""></div>
+                <h2 class="col-10 text-center">School Book Fair</h2>
+                <div class="d-flex justify-content-between col-11">
+                    <h3>$1</h3>
+                    <a href="./assets/pages/details.html">Details</a>
+                </div>
+            </section>
+            <section class="d-flex flex-column align-items-center shadow col-11 col-sm-2 bg-danger">
+                <div class="col-11 mt-2"><img class="img-fluid" src="./assets/images/cinema.jpg" alt=""></div>
+                <h2 class="col-10 text-center">Avengers</h2>
+                <div class="d-flex justify-content-between col-11">
+                    <h3>$250</h3>
                     <a href="./assets/pages/details.html">Details</a>
                 </div>
             </section>
@@ -45,6 +94,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
+    <!-- <script src="./assets/scripts/ejercicios.js"></script> -->
 </body>
 
 </html>

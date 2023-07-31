@@ -15,26 +15,28 @@
     <header class="d-flex flex-column flex-sm-row justify-content-sm-between">
         <div class="col-11 col-sm-1 m-3 d-flex justify-content-center"><img class="img-fluid" src="../images/amazing_brand.png" alt=""></div>
         <nav class="nav navbar-expand nav-pills nav-justified flex-column flex-sm-row col-sm-7 p-2">
-            <a class="nav-link flex-sm-fill text-sm-center" href="../../index.html">Home</a>
-            <a class="nav-link flex-sm-fill text-sm-center" href="./upcomingEvents.html">Upcoming Events</a>
-            <a class="nav-link flex-sm-fill text-sm-center" href="./pastEvents.html">Past Events</a>
-            <a class="nav-link active flex-sm-fill text-sm-center" href="#">Contact</a>
-            <a class="nav-link flex-sm-fill text-sm-center" href="./stats.html">Stats</a>
+            <a class="nav-link flex-sm-fill text-sm-center ankors d-flex align-items-center justify-content-center" href="../../index.html">Home</a>
+            <a class="nav-link flex-sm-fill text-sm-center ankors d-flex align-items-center justify-content-center" href="./upcomingEvents.html">Upcoming Events</a>
+            <a class="nav-link flex-sm-fill text-sm-center ankors d-flex align-items-center justify-content-center" href="./pastEvents.html">Past Events</a>
+            <a class="nav-link active flex-sm-fill text-sm-center ankors d-flex align-items-center justify-content-center" href="#">Contact</a>
+            <a class="nav-link flex-sm-fill text-sm-center ankors d-flex align-items-center justify-content-center" href="./stats.html">Stats</a>
         </nav>
     </header>
-    <main class="flex-grow-1 bg-warning">
-        <article>
-            <section class="d-flex flex-column align-items-center shadow">
-                <div class="col-11 col-sm-3">
-                    <img class="img-fluid" src="./assets/images/food_fair.jpg" alt="">
-                </div>
-                <h2 class="col-10 text-center">Festival of the collectivities</h2>
-                <div class="d-flex justify-content-between col-11">
-                    <h3>$5</h3>
-                    <a href="./details.html">Details</a>
-                </div>
-            </section>
-        </article>
+    <main class="flex-grow-1 bg-warning d-flex justify-content-center">
+        <form class="col-11" action="">
+            <fieldset class="d-flex flex-column">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+                <input type="submit" value="submit">
+            </fieldset>
+        </form>
     </main>
     <footer class="d-flex justify-content-between m-2">
         <div class="d-flex column-gap-1">

@@ -1,3 +1,20 @@
 body{
     height: 100vh;
 }
+@media (min-width: 576px){
+    .ankors{
+        font-size: small;
+    }
+    section{
+        height: 33vh;
+    }
+    section>div{
+        height: 50%;
+    }
+    h2{
+        font-size: small;
+    }
+    h3{
+        font-size: small;
+    }
+}
