@@ -1,20 +1,41 @@
+:root{
+    --roj: #F21B3F;
+    --cel: #08BDBD;
+}
 body{
     height: 100vh;
+    background-color: var(--roj);
+}
+header{
+    background-color: var(--cel);
+}
+nav>a{
+    color: var(--roj) !important;
+}
+nav a[href="#"]{
+    background-color: var(--roj) !important;
+    color: white !important;
+}
+h1{
+    background-color: var(--roj);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+#banner{
+    background-image: url(../images/optional_banner_1.jpg);
+    height: 20vh;
+    background-position: center;
+    background-size: cover;
+}
+th {
+    background-color: #3B1F2B !important;
+    color: white !important;
+}
+td {
+    background-color: #553D36 !important;
+    color: white !important;
 }
 @media (min-width: 576px){
-    .ankors{
-        font-size: small;
-    }
-    section{
-        height: 33vh;
-    }
-    section>div{
-        height: 50%;
-    }
-    h2{
-        font-size: small;
-    }
-    h3{
-        font-size: small;
-    }
+    
 }
