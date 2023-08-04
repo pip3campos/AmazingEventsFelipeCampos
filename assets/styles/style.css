@@ -9,6 +9,9 @@ body{
 header{
     background-color: var(--cel);
 }
+nav {
+    max-width: 75% !important;
+}
 nav>a{
     color: var(--roj) !important;
 }
@@ -22,8 +25,38 @@ h1{
     padding: 0.5rem;
     border-radius: 0.5rem;
 }
-#banner{
+#banner1{
     background-image: url(../images/optional_banner_1.jpg);
+    height: 20vh;
+    background-position: center;
+    background-size: cover;
+}
+#banner2{
+    background-image: url(../images/optional_banner_2.jpg);
+    height: 20vh;
+    background-position: center;
+    background-size: cover;
+}
+#banner3{
+    background-image: url(../images/optional_banner_3.jpg);
+    height: 20vh;
+    background-position: center;
+    background-size: cover;
+}
+#banner4{
+    background-image: url(../images/optional_banner_4.jpg);
+    height: 20vh;
+    background-position: center;
+    background-size: cover;
+}
+#banner5{
+    background-image: url(../images/optional_banner_5.jpg);
+    height: 20vh;
+    background-position: center;
+    background-size: cover;
+}
+#banner6{
+    background-image: url(../images/optional_banner_3.jpg);
     height: 20vh;
     background-position: center;
     background-size: cover;
@@ -36,6 +69,31 @@ td {
     background-color: #553D36 !important;
     color: white !important;
 }
+.card {
+    min-width: 28vw !important;
+    height: 70vh !important;
+}
+.card img {
+    height: 50% !important;
+    object-fit: cover !important;
+}
+#secDet {
+    background-color: var(--cel);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.divDet {
+    border-radius: 2rem;
+}
+#imgDet {
+    border-radius: 2rem 0 0 2rem;
+}
+footer{
+    background-color: var(--cel);
+    min-height: 10vh;
+}
 @media (min-width: 576px){
-    
+    nav>a{
+        width: 10% !important;
+    }
 }
