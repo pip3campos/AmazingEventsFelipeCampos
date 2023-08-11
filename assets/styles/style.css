@@ -92,8 +92,14 @@ footer{
     background-color: var(--cel);
     min-height: 10vh;
 }
+.barra{
+    font-size: small;
+}
 @media (min-width: 576px){
     nav>a{
         width: 10% !important;
+    }
+    .container-fluid{
+        width: 25%;
     }
 }
