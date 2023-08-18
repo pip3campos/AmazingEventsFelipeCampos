@@ -12,7 +12,7 @@
 </head>
 
 <body class="d-flex flex-column">
-    <header class="d-flex flex-column flex-sm-row justify-content-sm-between">
+    <header class="d-flex flex-column align-items-center flex-sm-row justify-content-sm-between">
         <div class="col-11 col-sm-2 m-3 d-flex justify-content-center"><img class="img-fluid" src="../images/amazing_brand.png" alt=""></div>
         <nav class="nav navbar-expand nav-pills nav-justified flex-column flex-sm-row col-sm-7 p-2">
             <a class="nav-link flex-sm-fill text-sm-center ankors d-flex align-items-center justify-content-center" href="../../index.html">Home</a>
@@ -23,84 +23,64 @@
         </nav>
     </header>
     <main class="flex-grow-1 d-flex flex-column justify-content-center">
-        <div id="banner" class="d-flex justify-content-center align-items-center">
-            <h1 class="">STATS</h1>
+        <div id="banner5" class="d-flex justify-content-center align-items-center">
+            <h1>STATS</h1>
         </div>
-        <table class="table table-success table-hover table-bordered w-75 mt-2 align-self-center">
+        <table class="table table-hover table-bordered w-75 mt-2 align-self-center">
             <thead>
                 <tr>
                     <th colspan="3">Events Statistics</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tabla1">
                 <tr>
                     <td>Events with highest % of assitance</td>
                     <td>Events with lowest % of assitance</td>
                     <td>Events with larger capacity</td>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
             </tbody>
+        </table>
+        <table class="table table-hover table-bordered w-75 mt-2 align-self-center">
             <thead>
                 <tr>
                     <th colspan="3">Upcoming events statistics by category</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tabla2">
                 <tr>
                     <td>Categories</td>
                     <td>Revenues</td>
                     <td>Percentage of assitance</td>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
             </tbody>
+        </table>
+        <table class="table table-hover table-bordered w-75 mt-2 align-self-center">
             <thead>
                 <tr>
                     <th colspan="3">Past events statistics by category</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tabla3">
                 <tr>
                     <td>Categories</td>
                     <td>Revenues</td>
                     <td>Percentage of assitance</td>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
             </tbody>
         </table>
     </main>
-    <footer class="d-flex justify-content-between m-2">
+    <footer class="d-flex justify-content-between m-2 align-items-center">
         <div class="d-flex column-gap-1">
-            <div class="col-2"><img class="img-fluid" src="../images/facebook.png" alt=""></div>
+            <div class="col-2 ms-4"><img class="img-fluid" src="../images/facebook.png" alt=""></div>
             <div class="col-2"><img class="img-fluid" src="../images/instagram.png" alt=""></div>
             <div class="col-2"><img class="img-fluid" src="../images/whatsapp.png" alt=""></div>
         </div>
-        <h6>Cohort N°50</h6>
+        <h6 class="pe-4">Cohort N°50</h6>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
+        <script type="module" src="../scripts/stats.js"></script>
 </body>
 
 </html>
