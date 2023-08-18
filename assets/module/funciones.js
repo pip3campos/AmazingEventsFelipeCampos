@@ -36,11 +36,25 @@ export function mostrarTarjeta ( listaDeEventos, contenedor){
     contenedor.innerHTML = template
 }
 
+function crearTarjetasUpPast (evento){
+    return `<section class="card col-11 col-sm-3">
+    <img class="card-img-top img-fluid" src="${evento.image}" alt="">
+    <div class="card-body d-flex flex-column">
+        <h2 class="card-title">${evento.name}</h2>
+        <p class="card-text">${evento.description}</p>
+        <div class="d-flex justify-content-around align-items-center">
+            <h3 class="card-title">$${evento.price}</h3>
+            <a class="btn btn-danger" href="../pages/details.html?id=${evento._id}">Details</a>
+        </div>
+    </div>
+</section>`
+}
+
 export function mostrarTarjetaUpComing ( listaDeEventos, contenedor, fechaActual){
     let template = ''
     for (const evento of listaDeEventos){
         if ( evento.date > fechaActual ){
-            template += crearTarjeta(evento)
+            template += crearTarjetasUpPast(evento)
         }
     }
     contenedor.innerHTML = template
@@ -50,7 +64,7 @@ export function mostrarTarjetaPast ( listaDeEventos, contenedor, fechaActual){
     let template = ''
     for (const evento of listaDeEventos){
         if ( fechaActual > evento.date ){
-            template += crearTarjeta(evento)
+            template += crearTarjetasUpPast(evento)
         }
     }
     contenedor.innerHTML = template
@@ -113,4 +127,91 @@ function crearTarjetaDetails (evento){
 
 export function mostrarTarjetaDetails ( evento, contenedor ){
     contenedor.innerHTML = crearTarjetaDetails(evento)
+}
+
+function inner ( eventoMayor, porcentajeMayor, eventoMenor, porcentajeMenor, eventoCap, capacidad, tabla ){
+    tabla.innerHTML += `<tr>
+<td>${eventoMayor.name} ( ${porcentajeMayor*100}% )</td>
+<td>${eventoMenor.name} ( ${porcentajeMenor*100}% )</td>
+<td>${eventoCap.name} ( ${capacidad.toLocaleString()} )</td>
+</tr>`
+}
+
+export function imprimirTabla1 ( objeto ){
+    const eventos = objeto.events
+    const currentDate = objeto.currentDate
+    let eventosPasados = eventos.filter( evento => evento.date < currentDate )
+    let capacidades = eventos.map( evento => evento.capacity)
+    let capacidadMaxima = Math.max(...capacidades)
+    let icap = capacidades.indexOf(capacidadMaxima)
+    let eventoMayorCapacidad = eventos[icap]
+    let porcetajeAsistencia = eventosPasados.map( evento => evento.assistance / evento.capacity)
+    let mayorPorcentaje = Math.max(...porcetajeAsistencia)
+    let menorPorcentaje = Math.min(...porcetajeAsistencia)
+    let imax = porcetajeAsistencia.indexOf(mayorPorcentaje)
+    let imin = porcetajeAsistencia.indexOf(menorPorcentaje)
+    let eventoMayorPorcentaje = eventosPasados[imax]
+    let eventoMenorPorcentaje = eventosPasados[imin]
+    inner( eventoMayorPorcentaje, mayorPorcentaje, eventoMenorPorcentaje, menorPorcentaje, eventoMayorCapacidad, capacidadMaxima, tabla1 )
+}
+
+function inner2 ( eventos, tabla ){
+    const categorias = Array.from( new Set( eventos.map( evento => evento.category ).flat() ) )
+    for ( let categoria of categorias ){
+        let ingresos = 0
+        let estimaciones = 0
+        let capacidades = 0
+        let porcentaje = 0
+        eventos.forEach( evento => {
+            if ( categoria == evento.category ){
+                ingresos += evento.estimate * evento.price
+                estimaciones += evento.estimate
+                capacidades += evento.capacity
+                porcentaje = ( estimaciones / capacidades ) * 100
+            }
+        })
+        tabla.innerHTML += `<tr>
+<td>${categoria}</td>
+<td>$${ingresos.toLocaleString()}</td>
+<td>${porcentaje.toLocaleString()}%</td>
+</tr>`
+    }
+}
+
+export function imprimirTabla2 ( objeto ){
+    const eventos = objeto.events
+    const currentDate = objeto.currentDate
+    let eventosFuturos = eventos.filter( evento => evento.date > currentDate )
+
+    inner2( eventosFuturos, tabla2 )
+}
+
+function inner3 ( eventos, tabla ){
+    const categorias = Array.from( new Set( eventos.map( evento => evento.category ).flat() ) )
+    for ( let categoria of categorias ){
+        let ingresos = 0
+        let asistencias = 0
+        let capacidades = 0
+        let porcentaje = 0
+        eventos.forEach( evento => {
+            if ( categoria == evento.category ){
+                ingresos += evento.assistance * evento.price
+                asistencias += evento.assistance
+                capacidades += evento.capacity
+                porcentaje = ( asistencias / capacidades ) * 100
+            }
+        })
+        tabla.innerHTML += `<tr>
+<td>${categoria}</td>
+<td>$${ingresos.toLocaleString()}</td>
+<td>${porcentaje.toLocaleString()}%</td>
+</tr>`
+    }
+}
+
+export function imprimirTabla3 ( objeto ){
+    const eventos = objeto.events
+    const currentDate = objeto.currentDate
+    let eventosPasados = eventos.filter( evento => evento.date < currentDate )
+    inner3( eventosPasados, tabla3 )
 }

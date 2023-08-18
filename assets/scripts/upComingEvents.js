@@ -12,7 +12,8 @@ fetch('https://mindhub-xj03.onrender.com/api/amazing')
     .then ( respuesta => {
         const objetoEventos = respuesta
         mostrarTarjetaUpComing ( objetoEventos.events, contenedor, objetoEventos.currentDate )
-        crearCheckboxs ( objetoEventos.events, contenedorFiltro )
+        let eventosParaCheckbox = objetoEventos.events.filter( eventoActual => eventoActual.date > objetoEventos.currentDate)
+        crearCheckboxs ( eventosParaCheckbox, contenedorFiltro )
         contenedorFiltro.addEventListener( 'input', suceso => {
             suceso.preventDefault()
             const checked = document.querySelectorAll('input[type=checkbox]:checked')
